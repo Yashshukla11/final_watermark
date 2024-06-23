@@ -108,8 +108,6 @@ for row_index in range(len(df)):
             for file in os.listdir(FINAL_FOLDER):
                 os.remove(os.path.join(FINAL_FOLDER, file))
             
-        # except Exception as e:
-        #     print(f"Error processing cell ({row_index}, {col_index}): {str(e)}")
-        #     continue
+  
 
 print('Processing complete.')
