@@ -39,32 +39,3 @@ def clean_json_data(json_str):
     json_str = json_str.replace("'", '"')
     return json_str
 
-# Only decode JSON data from the first cell in the DataFrame
-# row_index = 0
-# col_index = 0
-# json_data = df.iloc[row_index, col_index]
-
-# try:
-#     # Clean JSON-like data
-#     cleaned_json_data = clean_json_data(json_data)
-
-#     # Load JSON data (assuming it's a string representation of a list of dictionaries)
-#     images = json.loads(cleaned_json_data)
-
-#     # Iterate over each image dictionary
-#     for image_data in images:
-#         url = image_data['url']
-#         filename = os.path.basename(image_data['path'])  # Using 'path' as the filename
-#         save_path = os.path.join(save_directory, filename)
-#         download_image(url, save_path)
-
-# except json.JSONDecodeError as e:
-#     print(f"Error decoding JSON in cell ({row_index}, {col_index}): {str(e)}")
-
-# except KeyError as e:
-#     print(f"Missing key in JSON data in cell ({row_index}, {col_index}): {str(e)}")
-
-# except Exception as e:
-#     print(f"Exception occurred in cell ({row_index}, {col_index}): {str(e)}")
-
-# print('Download process complete.')
